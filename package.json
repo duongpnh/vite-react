@@ -11,12 +11,16 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.10.0"
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-router-dom": "^6.10.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@iconify-json/ic": "^1.1.13",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@types/react-slick": "^0.23.10",
     "@vitejs/plugin-react-swc": "^3.0.0",
     "typescript": "^4.9.3",
     "unocss": "^0.51.2",
