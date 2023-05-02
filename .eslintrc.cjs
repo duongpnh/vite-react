@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -11,36 +11,30 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     // This disables the formatting rules in ESLint that Prettier is going to be responsible for handling.
     // Make sure it's always the last config, so it gets the chance to override other configs.
-    'eslint-config-prettier'
+    'eslint-config-prettier',
   ],
-  overrides: [
-  ],
+  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: [
-    'react'
-  ],
+  plugins: ['react', 'eslint-plugin-prettier'],
   settings: {
     react: {
-      version: 'detect'
+      version: 'detect',
     },
     'import/resolver': {
       typescript: {
         alwaysTryTypes: true,
         project: './tsconfig.json',
-        extensions: [
-          '.ts',
-          '.tsx',
-          '.d.ts'
-        ]
-      }
-    }
+        extensions: ['.ts', '.tsx', '.d.ts'],
+      },
+    },
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
     'space-before-function-paren': 'off',
-    '@typescript-eslint/space-before-function-paren': 'off'
-  }
-}
+    '@typescript-eslint/space-before-function-paren': 'off',
+    'prettier/prettier': ['error', { singleQuote: true }],
+  },
+};

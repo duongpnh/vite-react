@@ -1,8 +1,8 @@
-import React from "react";
-import { Field, FieldProps, FastField, FastFieldProps } from "formik";
-import { Form, Input } from "antd";
-import { FormItemProps } from "antd/lib/form";
-import { InputProps } from "antd/lib/input";
+import React from 'react';
+import { Field, FieldProps, FastField, FastFieldProps } from 'formik';
+import { Form, Input } from 'antd';
+import { FormItemProps } from 'antd/lib/form';
+import { InputProps } from 'antd/lib/input';
 
 type Props = InputProps & {
   label?: string;
@@ -14,11 +14,11 @@ type Props = InputProps & {
 const getInputByType = (type: string | undefined) => {
   switch (type) {
     case 'password':
-      return Input.Password
-    default: 
+      return Input.Password;
+    default:
       return Input;
   }
-}
+};
 
 export const FormikInput: React.FC<Props> = ({
   name,
@@ -38,7 +38,7 @@ export const FormikInput: React.FC<Props> = ({
         <Form.Item
           label={label}
           name={name}
-          validateStatus={meta.touched && meta.error ? "error" : "success"}
+          validateStatus={meta.touched && meta.error ? 'error' : 'success'}
           help={meta.touched && meta.error}
           {...FormItemProps}
         >

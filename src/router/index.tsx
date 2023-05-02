@@ -1,11 +1,15 @@
-import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom'
-import App from '../App'
-import { Catalog } from '../pages/catalog'
-import { ErrorPage } from '../error-page'
-import { Dashboard } from '../pages/dashboard'
-import { SignIn } from '../pages/auth/SignIn'
-import { ProtectedRoute } from './ProtectedRoute'
-import { SignUp } from '@/pages/auth/SignUp'
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+} from 'react-router-dom';
+import App from '../App';
+import { Catalog } from '../pages/catalog';
+import { ErrorPage } from '../error-page';
+import { Dashboard } from '../pages/dashboard';
+import { SignIn } from '../pages/auth/SignIn';
+import { ProtectedRoute } from './ProtectedRoute';
+import { SignUp } from '@/pages/auth/SignUp';
 
 const routes = createRoutesFromElements(
   <Route path="/" element={<App />} errorElement={<ErrorPage />}>
@@ -16,6 +20,6 @@ const routes = createRoutesFromElements(
     <Route path="/sign-in" element={<SignIn />} />
     <Route path="/sign-up" element={<SignUp />} />
   </Route>
-)
+);
 
-export const router = createBrowserRouter(routes)
+export const router = createBrowserRouter(routes);
