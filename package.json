@@ -19,7 +19,7 @@
   },
   "lint-staged": {
     "*.(ts|js|tsx)": [
-      "prettier --rewrite",
+      "prettier --write",
       "git add",
       "npm run lint:fix",
       "npm run lint"
