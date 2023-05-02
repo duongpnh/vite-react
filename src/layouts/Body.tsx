@@ -1,6 +1,6 @@
-import { type FC } from 'react'
-import { Content } from './Content'
-import { Navbar } from './Navbar'
+import { type FC } from 'react';
+import { Content } from './Content';
+import { Navbar } from './Navbar';
 
 export const Body: FC = () => {
   return (
@@ -8,5 +8,5 @@ export const Body: FC = () => {
       <Navbar />
       <Content />
     </div>
-  )
-}
+  );
+};
