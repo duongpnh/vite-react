@@ -1,5 +1,5 @@
 import { Formik } from 'formik';
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Checkbox, Form } from 'antd';
 import { signInSchema } from './validation/sign-in';
 import { FormikInput } from '@/components/FormikInput';
 
@@ -7,7 +7,8 @@ const initialValues = { email: '', password: '' };
 
 export const SignIn = () => {
   return (
-    <div className="flex items-center justify-center h-full">
+    <div className="flex flex-col items-center justify-center h-full">
+      <h1>Sign In</h1>
       <Formik
         initialValues={initialValues}
         validationSchema={signInSchema}

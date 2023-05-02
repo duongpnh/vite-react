@@ -36,6 +36,6 @@ module.exports = {
     'space-before-function-paren': 'off',
     '@typescript-eslint/space-before-function-paren': 'off',
     'prettier/prettier': ['error', { singleQuote: true, endOfLine: 'auto' }],
-    'import/no-unresolved': [2, { caseSensitive: false }],
+    'import/no-unresolved': ['error', { ignore: ['^virtual', '^uno'] }],
   },
 };
