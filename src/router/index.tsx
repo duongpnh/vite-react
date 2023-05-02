@@ -10,12 +10,18 @@ import { Dashboard } from '../pages/dashboard';
 import { SignIn } from '../pages/auth/SignIn';
 import { ProtectedRoute } from './ProtectedRoute';
 import { SignUp } from '@/pages/auth/SignUp';
+import { ProductsManagement } from '@/pages/products';
+import { OrdersManagement } from '@/pages/orders';
+import { UsersManagement } from '@/pages/users';
 
 const routes = createRoutesFromElements(
   <Route path="/" element={<App />} errorElement={<ErrorPage />}>
     <Route index element={<Dashboard />} />
     <Route element={<ProtectedRoute />}>
       <Route path="/catalog" element={<Catalog />} />
+      <Route path="/products" element={<ProductsManagement />} />
+      <Route path="/users" element={<UsersManagement />} />
+      <Route path="/orders" element={<OrdersManagement />} />
     </Route>
     <Route path="/sign-in" element={<SignIn />} />
     <Route path="/sign-up" element={<SignUp />} />

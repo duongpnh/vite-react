@@ -1,0 +1,1 @@
+export const OrdersManagement = () => (<h1>Orders Management</h1>);

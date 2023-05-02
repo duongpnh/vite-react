@@ -5,7 +5,7 @@ export const Content = () => {
   return (
     <main className="flex-auto bg-gray-100 h-[calc(100%-60px)]">
       <div className="container min-h-md h-full">
-        <Scrollbar>
+        <Scrollbar style={{ paddingInlineEnd: '1rem' }}>
           <Outlet />
         </Scrollbar>
       </div>
