@@ -1,6 +1,6 @@
 import { Dropdown } from 'antd'
 import type { MenuProps } from 'antd';
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const items: MenuProps['items'] = [
   {
