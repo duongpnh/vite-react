@@ -1,20 +1,18 @@
-import { Formik } from 'formik'
+import { Formik } from 'formik';
 import { Button, Checkbox, Form, Input } from 'antd';
 import { signInSchema } from './validation/sign-in';
 import { FormikInput } from '@/components/FormikInput';
 
-
 const initialValues = { email: '', password: '' };
 
 export const SignIn = () => {
-
   return (
-    <div className='flex items-center justify-center h-full'>
+    <div className="flex items-center justify-center h-full">
       <Formik
         initialValues={initialValues}
         validationSchema={signInSchema}
         onSubmit={(values, { setSubmitting }) => {
-          console.log({ values })
+          console.log({ values });
         }}
       >
         {({
@@ -35,18 +33,15 @@ export const SignIn = () => {
             onFinish={handleSubmit}
             autoComplete="off"
           >
-            <FormikInput
-              label="Email"
-              name="email"
-            />
+            <FormikInput label="Email" name="email" />
 
-            <FormikInput
-              label="Password"
-              name="password"
-              type="password"
-            />
+            <FormikInput label="Password" name="password" type="password" />
 
-            <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
+            <Form.Item
+              name="remember"
+              valuePropName="checked"
+              wrapperCol={{ offset: 8, span: 16 }}
+            >
               <Checkbox>Remember me</Checkbox>
             </Form.Item>
 
@@ -59,5 +54,5 @@ export const SignIn = () => {
         )}
       </Formik>
     </div>
-  )
-}
+  );
+};
