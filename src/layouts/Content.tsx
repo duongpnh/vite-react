@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom';
 import Scrollbar from 'react-perfect-scrollbar';
 
 export const Content = () => {
@@ -10,5 +10,5 @@ export const Content = () => {
         </Scrollbar>
       </div>
     </main>
-  )
-}
+  );
+};
