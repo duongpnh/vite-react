@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { Product } from "../../components/Product"
+import { Product } from "@/components/Product";
 
 const settings = {
   dots: false,

@@ -1,6 +1,7 @@
+import { type FC } from 'react'
 import { NavLink } from 'react-router-dom'
 
-export const Sidebar = () => {
+export const Sidebar: FC = () => {
   return (
     <header>
       <div className="h-full w-250px bg-pink-7 flex items-center">

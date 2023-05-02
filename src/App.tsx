@@ -1,13 +1,12 @@
-import { Navbar } from './layouts/Navbar'
-import { Content } from './layouts/Content'
 import { Sidebar } from './layouts/Sidebar'
+import { Body } from '@/layouts/Body'
+import { type FC } from 'react'
 
-function App() {
-
+const App: FC = () => {
   return (
     <div className='h-full flex flex-row'>
       <Sidebar />
-      <Content />
+      <Body />
     </div >
   )
 }
