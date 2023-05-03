@@ -9,7 +9,7 @@ export const productCreateSchema = object().shape({
   status: string(),
   category: string(),
   type: string(),
-  price: number(),
+  price: number().min(1).required('Required'),
   compareAtPrice: number(), // sale off pricing
   collections: array().of(string()), // groups
   themeTemplate: string(),

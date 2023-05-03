@@ -1,10 +1,13 @@
 import React from 'react';
 import { Field, FieldProps, FastField, FastFieldProps } from 'formik';
-import { Form, Input } from 'antd';
+import { Form, Input, Select, SelectProps } from 'antd';
 import { FormItemProps } from 'antd/lib/form';
 import { InputProps } from 'antd/lib/input';
+import ReactQuill, { ReactQuillProps } from 'react-quill';
 
-type Props = InputProps & {
+type TInputProps = (InputProps & SelectProps & ReactQuillProps); 
+
+type Props = TInputProps & {
   label?: string;
   name: string;
   fast?: boolean;
@@ -15,6 +18,10 @@ const getInputByType = (type: string | undefined) => {
   switch (type) {
     case 'password':
       return Input.Password;
+    case 'select':
+      return Select;
+    case 'richtext-editor':
+      return ReactQuill;
     default:
       return Input;
   }

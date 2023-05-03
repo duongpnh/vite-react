@@ -1,7 +1,7 @@
 import { Button, Space, Table, Tag } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
-import { ModalProduct } from './modals/ModalProduct';
 import { useCallback, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface DataType {
   key: string;
@@ -85,25 +85,17 @@ const data: DataType[] = [
 ];
 
 export const ProductsManagement = () => {
-  
-  const [open, setOpen] = useState(false);
-
-  const toggleModal = useCallback(() => setOpen(p => !p), []);
-
-  const handleSubmit = (values: any) => {
-    console.log({ values });
-    toggleModal();
-  }
+  const navigate = useNavigate();
+  const createProduct = () => navigate('/products/add');
 
   return (
   <div>
     <Space wrap>
-      <Button type='primary' className='mt-3 mb-3 bg-green-7' onClick={toggleModal}>Add Product</Button>
+      <Button type='primary' className='mt-3 mb-3 bg-green-7' onClick={createProduct}>Add Product</Button>
       <Button type='primary' className='mt-3 mb-3 bg-yellow-7'>Update Product</Button>
       <Button type='primary' className='mt-3 mb-3 bg-red-7'>Add Product</Button>
     </Space>
     <Table columns={columns} dataSource={data} />
-    <ModalProduct open={open} closeModal={toggleModal} submitModal={handleSubmit} />
   </div>
   )
 };
