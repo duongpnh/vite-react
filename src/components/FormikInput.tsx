@@ -1,6 +1,6 @@
 import React from 'react';
 import { Field, FieldProps, FastField, FastFieldProps } from 'formik';
-import { Form, Input, Select, SelectProps } from 'antd';
+import { Form, Input, Select, SelectProps, InputNumber, InputNumberProps } from 'antd';
 import { FormItemProps } from 'antd/lib/form';
 import { InputProps } from 'antd/lib/input';
 import ReactQuill, { ReactQuillProps } from 'react-quill';
@@ -53,8 +53,13 @@ export const FormikInput: React.FC<Props> = ({
             {...field}
             {...rest}
             onChange={(e) => {
-              onChange?.(e); // onChange passed into the field
-              field.onChange(e);
+              if (type !== 'richtext-editor') {
+                onChange?.(e); // onChange passed into the field
+                field.onChange(e);
+              } else {
+                form.setFieldValue(field.name, e);
+              }
+
               if (!meta.touched) form.setFieldTouched(name, true);
             }}
           />
