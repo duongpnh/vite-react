@@ -13,20 +13,34 @@ interface DataType {
 
 const columns: ColumnsType<DataType> = [
   {
+    title: 'Thumbnail',
+    dataIndex: 'thumbnail',
+    key: 'thumbnail',
+    width: 100,
+    fixed: 'left',
+    render: (value: string) => <img src="https://picsum.photos/200/300" width={100} height={100} />
+  },
+  {
     title: 'Name',
     dataIndex: 'name',
     key: 'name',
+    width: 150,
+    fixed: 'left',
     render: (text) => <a>{text}</a>,
   },
   {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
+    title: 'Price',
+    dataIndex: 'price',
+    key: 'price',
+    width: 100,
+    fixed: 'left',
+    render: (text) => <a>$0.00</a>,
   },
   {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
+    title: 'Compare-at Price',
+    dataIndex: 'compareAtPrice',
+    key: 'compareAtPrice',
+    render: (text) => <a>$0.00</a>,
   },
   {
     title: 'Tags',
@@ -53,7 +67,6 @@ const columns: ColumnsType<DataType> = [
     key: 'action',
     render: (_, record) => (
       <Space size="middle">
-        <a>Invite {record.name}</a>
         <a>Delete</a>
       </Space>
     ),
@@ -92,10 +105,10 @@ export const ProductsManagement = () => {
   <div>
     <Space wrap>
       <Button type='primary' className='mt-3 mb-3 bg-green-7' onClick={createProduct}>Add Product</Button>
-      <Button type='primary' className='mt-3 mb-3 bg-yellow-7'>Update Product</Button>
-      <Button type='primary' className='mt-3 mb-3 bg-red-7'>Add Product</Button>
+      <Button type='primary' className='mt-3 mb-3 bg-yellow-6'>Update Product</Button>
+      <Button type='primary' className='mt-3 mb-3 bg-red-7'>Delete Product</Button>
     </Space>
-    <Table columns={columns} dataSource={data} />
+    <Table scroll={{ x: 700 }} rowSelection={{ type: 'checkbox' }} columns={columns} dataSource={data} />
   </div>
   )
 };

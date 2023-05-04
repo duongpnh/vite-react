@@ -15,8 +15,8 @@ const items: MenuProps['items'] = [
 
 export const Navbar = () => {
   return (
-    <header className="flex-auto bg-gray-4 w-full h-60px">
-      <nav className="h-60px w-full bg-gray-3">
+    <header className="flex-auto w-full h-60px">
+      <nav className="h-60px w-full">
         <ul className="flex flex-row list-none m-0 p-0 items-center h-full">
           <li className="pl-5 pr-5 ml-auto">
             <div className="text-4xl">

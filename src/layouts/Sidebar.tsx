@@ -3,6 +3,9 @@ import { type FC } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export const Sidebar: FC = () => {
+  const inactiveClasses = "decoration-none hover:color-cyan-1";
+  const activeClasses = inactiveClasses + " color-white";
+
   return (
     <header>
       <div className="h-full w-250px bg-pink-7 flex items-center">
@@ -12,7 +15,7 @@ export const Sidebar: FC = () => {
               <li className="pt-0 pl-20px pb-10px font-500" text="5">
                 <NavLink
                   text="yellow-4"
-                  className="decoration-none hover:color-cyan-1"
+                  className={({ isActive }) => isActive ? activeClasses : inactiveClasses}
                   to="/"
                 >
                   Dashboard
@@ -21,7 +24,7 @@ export const Sidebar: FC = () => {
               <li className="pt-0 pl-20px pb-10px font-500" text="5">
                 <NavLink
                   text="yellow-4"
-                  className="decoration-none hover:color-cyan-1"
+                  className={({ isActive }) => isActive ? activeClasses : inactiveClasses}
                   to="/catalog"
                 >
                   Catalog

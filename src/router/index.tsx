@@ -14,6 +14,7 @@ import { ProductsManagement } from '@/pages/products';
 import { OrdersManagement } from '@/pages/orders';
 import { UsersManagement } from '@/pages/users';
 import { NewProduct } from '@/pages/products/new-product';
+import { NewUser } from '@/pages/users/new-user';
 
 const routes = createRoutesFromElements(
   <Route path="/" element={<App />} errorElement={<ErrorPage />}>
@@ -23,6 +24,7 @@ const routes = createRoutesFromElements(
       <Route path="/products" element={<ProductsManagement />} />
       <Route path="/products/add" element={<NewProduct />} />
       <Route path="/users" element={<UsersManagement />} />
+      <Route path="/users/add" element={<NewUser />} />
       <Route path="/orders" element={<OrdersManagement />} />
     </Route>
     <Route path="/sign-in" element={<SignIn />} />

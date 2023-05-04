@@ -7,6 +7,7 @@ import { productCreateSchema } from './validation/product-create.schema';
 import { FormikInput } from '@/components/FormikInput';
 import { ProductStatus } from './enums/status.enum';
 import { EditableCell, EditableRow } from '@/components/custom/EditTable';
+import ScrollBar from 'react-perfect-scrollbar';
 
 
 const initialValues = {

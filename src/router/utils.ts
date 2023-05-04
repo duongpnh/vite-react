@@ -1,3 +1,3 @@
 export const isLoggedIn = () => true;
-export const isAdmin = () => true;
-export const isUser = () => false;
+export const isAdmin = () => false;
+export const isUser = () => true;
